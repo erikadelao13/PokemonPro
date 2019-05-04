@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "64663000518",
+    "firebase_url": "https://pokepro-cdf9c.firebaseio.com",
+    "project_id": "pokepro-cdf9c",
+    "storage_bucket": "pokepro-cdf9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64663000518:android:7d85ea60ac84ce4a",
+        "android_client_info": {
+          "package_name": "com.pokemonpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64663000518-rmbtr8gvvm5a8n2vtg7jhkimekdmrn6q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pokemonpro",
+            "certificate_hash": "fc701d67b30a29d8c640fcca4f0bdb657e83adb7"
+          }
+        },
+        {
+          "client_id": "64663000518-4edlonjav4oad7i6rkj38rea741k4j7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkBmBjKpUnCZaBGT0V6z7pJ_rzV_0WND0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64663000518-4edlonjav4oad7i6rkj38rea741k4j7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
