@@ -11,8 +11,8 @@ class Login extends Component {
       <Image source={require('../../assets/images/pokemonlogo.png')} style={styles.imageLogo} />
         <GoogleAuth />            
       <Button
-       title="let's start"
-       onPress={() => this.props.navigation.navigate('Region')} />
+       title="Teams"
+       onPress={() => this.props.navigation.navigate('Teams')} />
       </View>      
     );
   }
@@ -26,27 +26,3 @@ function mapStateToProps(state){
 
 export default connect(mapStateToProps)(Login)
 
-
-/*import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Image, Button} from 'react-native';
-import styles from './Styles';
-import {StackNavigator, createStackNavigator, createAppContainer} from 'react-navigation';
-import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
-
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Image source={require('../../assets/images/pokemonlogo.png')} style={styles.imageLogo} />
-        <Button
-         title="let's start"
-         onPress={() => this.props.navigation.navigate('region')} />
-         <Button style={styles.button}
-         title="Teams"
-         onPress={() => this.props.navigation.navigate('teams')} />
-      </View>
-    );
-  }
-}*/

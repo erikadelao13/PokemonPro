@@ -5,8 +5,8 @@ const RenderRegion = (props) => {
   return(
     <TouchableOpacity style={styles.item} onPress={props.onpress}>
         <View style={styles.viewStyle}>
-                <Text style={styles.itemText}>{props.region}</Text>
                 <Image source={props.image} style={styles.img}></Image>
+                <Text style={styles.itemText}>{props.region}</Text>
         </View>
     </TouchableOpacity>
   );

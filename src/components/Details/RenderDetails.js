@@ -1,13 +1,13 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, Image} from 'react-native';
+import { View, Text, StyleSheet, Image} from 'react-native';
 import styles from '../../screens/Pokemon/Styles';
-const PokemonList = (props) => {
+const RenderDetail = (props) => {
   return(
-    <TouchableOpacity style={styles.item} onPress={props.onpress} activeOpacity={0.6} onLongPress={props.onlongpress}>
+    <View>
         <Text style={styles.itemText}>{props.pokemon}</Text>
         <Image style={styles.img} source={{ uri: 'http://pokestadium.com/sprites/xy/' + props.pokemon+ '.gif' }}></Image>
-    </TouchableOpacity>
+    </View>
   );
 }
 
-export default PokemonList;
+export default RenderDetail;

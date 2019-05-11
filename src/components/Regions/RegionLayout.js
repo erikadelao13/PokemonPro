@@ -11,9 +11,6 @@ function RegionLayout(props){
           Welcome! {props.user.name}, choose a region and build your own poke team!
         </Text>
       </View>
-      <View>
-        {props.children}
-      </View>
     </View>
   );
 }
@@ -28,7 +25,7 @@ const styles = StyleSheet.create({
   welcomeText: {
     textAlign: 'center',
     color: '#272838', 
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'GistLight',
     fontSize: 16,
   }
 })
