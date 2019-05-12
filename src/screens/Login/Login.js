@@ -10,9 +10,6 @@ class Login extends Component {
       <View style={styles.container}>
       <Image source={require('../../assets/images/pokemonlogo.png')} style={styles.imageLogo} />
         <GoogleAuth />            
-      <Button
-       title="Teams"
-       onPress={() => this.props.navigation.navigate('Teams')} />
       </View>      
     );
   }

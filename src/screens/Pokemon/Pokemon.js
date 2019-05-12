@@ -19,9 +19,7 @@ const formatData = (pokemon, numColumns) => {
 let item;
 const numColumns = 3;
 let contador = 0;
-export let region;
-let generateUuid = uuid.v1();
-export let id = generateUuid.split('-')[0];   
+//export let region;
 class Pokemon extends Component<Props> {
     constructor(props) {
         super(props);
@@ -77,7 +75,9 @@ class Pokemon extends Component<Props> {
             );//nos permite hacer la peticion al API
     };  
 
-    addPokemons = (item,region) => {     
+    addPokemons = (item,region) => {
+        let generateUuid = uuid.v1();
+        let id = generateUuid.split('-')[0];                
         firebase.database().ref(`Pokemons/${this.props.user.uid}/${region}/${id}`).set({
             team: item,
         })
@@ -125,7 +125,7 @@ class Pokemon extends Component<Props> {
                     keyExtractor={(item, index) => index.toString()}
                     numColumns={numColumns}
                 />
-                <TouchableOpacity style={styles.floatingButton} activeOpacity={0.6} onPress={() => {this.addPokemons(this.state.team, this.state.region)}}>
+                <TouchableOpacity style={styles.floatingButton} activeOpacity={0.6} onLongPress={() => this.props.navigation.navigate('teams', {region: this.state.region})} onPress={() => {this.addPokemons(this.state.team, this.state.region)}}>
                     <Text style={styles.addIcon}>Create Team!</Text>
                 </TouchableOpacity>             
             </View>
