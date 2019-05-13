@@ -18,6 +18,7 @@ class Teams extends Component<Props> {
         region: this.props.navigation.state.params.region,
         teams: [],
         visibleModal: null,
+        selectedTeam: [],
         }
 
     }
@@ -51,20 +52,25 @@ class Teams extends Component<Props> {
           <Text style={styles.addIcon}>{text}</Text>
       </TouchableOpacity>
     );
-    _renderModalContent = () => (
+    _renderModalContent = (param) => (
         <View style={styles.modalContent}>
             <FlatList //es como un for each
-                data={this.state.teams} //colocamos la lista
+                data={param} //colocamos la lista
                 renderItem={this.renderItem2}
                 keyExtractor={(item, index) => index.toString()}
                 numColumns={numColumns2}
             />        
             {this._renderButton('Close', () => this.setState({ visibleModal: null }))}                      
         </View>
-    );       
+    );
+    showModalItem = (item) => {
+      this.setState({ visibleModal: 1 });
+        return(<Modal isVisible={this.state.visibleModal === 1}>{this._renderModalContent(item)}</Modal>);
+    }       
   renderItem = ({item,index}) => {
+    console.log(this.state.teams);
     return(
-      <TouchableOpacity style={styles.item} onPress={() => this.setState({ visibleModal: 1 })}>
+      <TouchableOpacity style={styles.item} onPress={() => this.showModalItem(item.team)}>
         {(item.team).map(pokemon => <Text style={styles.itemText}>{pokemon}</Text>)}         
       </TouchableOpacity>      
     );
@@ -77,14 +83,14 @@ class Teams extends Component<Props> {
             renderItem={this.renderItem}
             keyExtractor={(item, index) => index.toString()}
             numColumns={numColumns}
-            /> 
-          <Modal isVisible={this.state.visibleModal === 1}>
-            {this._renderModalContent()}
-          </Modal>                      
+            />                    
         </View> 
     );
   }
 }
+/*          <Modal isVisible={this.state.visibleModal === 1}>
+            {this._renderModalContent()}
+          </Modal>   */
 function mapStateToProps(state){
     return {
       authorize: state.authorize,
