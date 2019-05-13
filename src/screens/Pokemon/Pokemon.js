@@ -125,9 +125,12 @@ class Pokemon extends Component<Props> {
                     keyExtractor={(item, index) => index.toString()}
                     numColumns={numColumns}
                 />
-                <TouchableOpacity style={styles.floatingButton} activeOpacity={0.6} onLongPress={() => this.props.navigation.navigate('teams', {region: this.state.region})} onPress={() => {this.addPokemons(this.state.team, this.state.region)}}>
+                <TouchableOpacity style={styles.floatingButton} activeOpacity={0.6} onPress={() => {this.addPokemons(this.state.team, this.state.region)}}>
                     <Text style={styles.addIcon}>Create Team!</Text>
-                </TouchableOpacity>             
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.floatingButtonTwo} activeOpacity={0.6} onPress={() => this.props.navigation.navigate('teams', {region: this.state.region})}>
+                    <Text style={styles.addIcon}>Show Teams!</Text>
+                </TouchableOpacity>                  
             </View>
         );
     }    

@@ -8,7 +8,7 @@ import { StyleSheet } from 'react-native';
    },
    item: {
         alignItems: 'center',
-        backgroundColor: '#CEDCCE',
+        backgroundColor: '#F6F7EB',
         flex: 1,
         margin: 2
    },
@@ -34,12 +34,24 @@ import { StyleSheet } from 'react-native';
         width: 80,
         height: 80,
         borderRadius: 50,
-        backgroundColor: '#ee6e73',
+        backgroundColor: '#D8973C',
         position: 'absolute',
         bottom: 15,
         right: 15,
         elevation: 8
    },
+   floatingButtonTwo: {
+     alignItems: 'center',
+     justifyContent: 'center',
+     width: 80,
+     height: 80,
+     borderRadius: 50,
+     backgroundColor: '#273E47',
+     position: 'absolute',
+     bottom: 100,
+     right: 15,
+     elevation: 8
+   },   
    selected: {
    backgroundColor: "#FA7B5F"
    },

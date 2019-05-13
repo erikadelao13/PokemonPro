@@ -8,7 +8,7 @@ import { StyleSheet } from 'react-native';
    },
    item: {
         alignItems: 'center',
-        backgroundColor: '#CEDCCE',
+        backgroundColor: '#F6F7EB',
         flex: 1,
         margin: 2
    },
